@@ -1,33 +1,35 @@
 import java.util.Scanner;
 
-public class Exercicio03 {
+public class exercicio3 {
+    
+    // Método para calcular a diferença conforme a fórmula
+    public static int calcularDiferenca(int a, int b, int c, int d) {
+        return (a * b) - (c * d);
+    }
 
-	/*Fazer um programa para ler quatro valores inteiros A, B, C e D. A seguir, calcule e mostre a diferen�a do produto
-de A e B pelo produto de C e D segundo a f�rmula: DIFERENCA = (A * B - C * D).*/
-	
-	public static void main(String[] args) {
-		
-		int A;
-		int B;
-		int C;
-		int D;
-		int diferenca;
-		
-		Scanner sc = new Scanner(System.in);
-		
-		A = sc.nextInt();
-		B = sc.nextInt();
-		C = sc.nextInt();
-		D = sc.nextInt();
-		
-	 	diferenca = (A*B) - (C*D);
-		
-		System.out.println("A diferen�a entre os produtos de a*b e c*d �: " + 
-		diferenca);
-		
-		sc.close();
-		
+    // Método principal
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
-	}
+        // Solicitando e lendo os valores de A, B, C e D do usuário
+        System.out.println("Digite o valor de A: ");
+        int a = scanner.nextInt();
 
+        System.out.println("Digite o valor de B: ");
+        int b = scanner.nextInt();
+
+        System.out.println("Digite o valor de C: ");
+        int c = scanner.nextInt();
+
+        System.out.println("Digite o valor de D: ");
+        int d = scanner.nextInt();
+
+        // Calculando a diferença
+        int diferenca = calcularDiferenca(a, b, c, d);
+
+        // Exibindo a diferença
+        System.out.println("A diferença do produto de A e B pelo produto de C e D é: " + diferenca);
+
+        scanner.close();
+    }
 }
